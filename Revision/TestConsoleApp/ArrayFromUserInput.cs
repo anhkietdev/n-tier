@@ -58,4 +58,22 @@
         }
         Console.WriteLine($"Min: {min}");
     }
+
+    public void SumAll()
+    {
+        Console.WriteLine("Enter the number of elements in the array");
+        int n = Convert.ToInt32(Console.ReadLine());
+        int[] arr = new int[n];
+        Console.WriteLine("Enter the elements of the array");
+        for (int i = 0; i < n; i++)
+        {
+            arr[i] = Convert.ToInt32(Console.ReadLine());
+        }
+        int sum = 0;
+        for (int i = 0; i < n; i++)
+        {
+            sum += arr[i];
+        }
+        Console.WriteLine($"Sum: {sum}");
+    }
 }
