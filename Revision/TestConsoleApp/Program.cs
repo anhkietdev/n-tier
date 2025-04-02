@@ -1,11 +1,12 @@
-﻿using System.Text;
+﻿int[] arr;
+Console.Write("Nhập số phần tử của mảng: ");
+int n = int.Parse(Console.ReadLine());
 
-StringBuilder stringBuilder = new StringBuilder();
+arr = new int[n];
+for (int i = 0; i < n; i++)
+{
+    Console.Write($"Nhập phần tử thứ {i + 1}: ");
+    arr[i] = int.Parse(Console.ReadLine());
+}
 
-stringBuilder.Append("Hello, ");
-stringBuilder.Append("World!");
-
-Console.WriteLine(stringBuilder.ToString());
-
-string str = $"Now is: {DateTime.Now}";
-Console.WriteLine(str);
+Console.WriteLine("Mảng vừa nhập: " + string.Join(", ", arr));
