@@ -1,6 +1,7 @@
 ﻿public class Practise
 {
-    public void UserInputArray()
+
+    public int[] ProcessArray()
     {
         Console.WriteLine("Enter the number of elements in the array");
         int n = Convert.ToInt32(Console.ReadLine());
@@ -10,8 +11,13 @@
         {
             arr[i] = Convert.ToInt32(Console.ReadLine());
         }
+        return arr;
+    }
+    public void DisplayArray()
+    {
+        int[] arr = ProcessArray();
         Console.WriteLine("The elements of the array are:");
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
             Console.WriteLine(arr[i]);
         }
@@ -19,16 +25,9 @@
 
     public void FindMax()
     {
-        Console.WriteLine("Enter the number of elements in the array");
-        int n = Convert.ToInt32(Console.ReadLine());
-        int[] arr = new int[n];
-        Console.WriteLine("Enter the elements of the array");
-        for (int i = 0; i < n; i++)
-        {
-            arr[i] = Convert.ToInt32(Console.ReadLine());
-        }
+        int[] arr = ProcessArray();
         int max = arr[0];
-        for (int i = 1; i < n; i++)
+        for (int i = 1; i < arr.Length; i++)
         {
             if (arr[i] > max)
             {
@@ -40,16 +39,9 @@
 
     public void FindMin()
     {
-        Console.WriteLine("Enter the number of elements in the array");
-        int n = Convert.ToInt32(Console.ReadLine());
-        int[] arr = new int[n];
-        Console.WriteLine("Enter the elements of the array");
-        for (int i = 0; i < n; i++)
-        {
-            arr[i] = Convert.ToInt32(Console.ReadLine());
-        }
+        int[] arr = ProcessArray();
         int min = arr[0];
-        for (int i = 1; i < n; i++)
+        for (int i = 1; i < arr.Length; i++)
         {
             if (arr[i] < min)
             {
@@ -61,16 +53,9 @@
 
     public void SumAll()
     {
-        Console.WriteLine("Enter the number of elements in the array");
-        int n = Convert.ToInt32(Console.ReadLine());
-        int[] arr = new int[n];
-        Console.WriteLine("Enter the elements of the array");
-        for (int i = 0; i < n; i++)
-        {
-            arr[i] = Convert.ToInt32(Console.ReadLine());
-        }
+        int[] arr = ProcessArray();
         int sum = 0;
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
             sum += arr[i];
         }
@@ -79,18 +64,23 @@
 
     public void GetAverage()
     {
-        Console.WriteLine("Enter the number of elements in the array");
-        int n = Convert.ToInt32(Console.ReadLine());
-        int[] arr = new int[n];
-        Console.WriteLine("Enter the elements of the array");
-        for (int i = 0; i < n; i++)
-        {
-            arr[i] = Convert.ToInt32(Console.ReadLine());
-        }
+        int[] arr = ProcessArray();
         int sum = 0;
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < arr.Length; i++)
         {
             sum += arr[i];
+        }
+        int average = sum / arr.Length;
+        Console.WriteLine($"Average: {average}");
+    }
+
+    public void ReverseArray()
+    {
+        int[] arr = ProcessArray();
+        int[] reversedArray;
+        for (int i = 0; i < 0; i--)
+        {
+            reversedArray[];
         }
         int average = sum / n;
         Console.WriteLine($"Average: {average}");
