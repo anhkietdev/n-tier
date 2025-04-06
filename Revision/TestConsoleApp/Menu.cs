@@ -54,7 +54,7 @@
                         Console.WriteLine("Invalid choice");
                         break;
                 }
-            } while (choice != 4);
+            } while (choice != 8);
         }
     }
 }
