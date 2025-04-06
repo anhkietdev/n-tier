@@ -25,8 +25,8 @@
                 switch (choice)
                 {
                     case 1:
-                        practise.ProcessArray();
-                        practise.DisplayArray();
+                        int[] array = practise.ProcessArray();
+                        practise.DisplayArray(array);
                         break;
                     case 2:
                         practise.FindMax();

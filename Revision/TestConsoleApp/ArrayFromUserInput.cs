@@ -13,13 +13,12 @@
         }
         return arr;
     }
-    public void DisplayArray()
+    public void DisplayArray(int[] inputArray)
     {
-        int[] arr = ProcessArray();
         Console.WriteLine("The elements of the array are:");
-        for (int i = 0; i < arr.Length; i++)
+        for (int i = 0; i < inputArray.Length; i++)
         {
-            Console.WriteLine(arr[i]);
+            Console.WriteLine(inputArray[i]);
         }
     }
 
@@ -77,13 +76,13 @@
     public void ReverseArray()
     {
         int[] arr = ProcessArray();
-        int[] reversedArray = [];
-        int n = arr.Length;
+        int[] reversedArray = new int[arr.Length];
+
         for (int i = 0; i < arr.Length; i++)
         {
-            reversedArray[i] = arr[n];
-            n--;
+            reversedArray[i] = arr[arr.Length - 1 - i];
         }
-        Console.WriteLine($"Array after reversed: {reversedArray}");
+
+        Console.WriteLine("Array after reversed: " + string.Join(", ", reversedArray));
     }
 }
