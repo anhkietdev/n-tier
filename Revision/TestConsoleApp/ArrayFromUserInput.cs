@@ -85,4 +85,32 @@
 
         Console.WriteLine("Array after reversed: " + string.Join(", ", reversedArray));
     }
+
+    public void FindUnique()
+    {
+        //int[] arr = ProcessArray();
+        //HashSet<int> uniqueElements = new HashSet<int>(arr);
+        //Console.WriteLine("Unique elements in the array: " + string.Join(", ", uniqueElements));
+
+        int[] arr = ProcessArray();
+        int unique = 0;
+        for (int i = 0; i < arr.Length; i++)
+        {
+            bool isUnique = true;
+            for (int j = 0; j < arr.Length; j++)
+            {
+                if (i != j && arr[i] == arr[j])
+                {
+                    isUnique = false;
+                    break;
+                }
+            }
+            if (isUnique)
+            {
+                unique = arr[i];
+                break;
+            }
+        }
+        Console.WriteLine($"Unique element: {unique}");
+    }
 }
