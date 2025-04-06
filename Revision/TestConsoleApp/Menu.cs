@@ -11,7 +11,8 @@
             Console.WriteLine("4. Summ all element in an array");
             Console.WriteLine("5. Get average element in an array");
             Console.WriteLine("6. Reverse element in an array");
-            Console.WriteLine("7. Exit");
+            Console.WriteLine("7. Find unique element in an array");
+            Console.WriteLine("8. Exit");
         }
         public void Run()
         {
@@ -44,6 +45,9 @@
                         practise.ReverseArray();
                         break;
                     case 7:
+                        practise.FindUnique();
+                        break;
+                    case 8:
                         Console.WriteLine("Exiting the program");
                         break;
                     default:
