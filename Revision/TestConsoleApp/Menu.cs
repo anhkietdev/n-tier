@@ -4,10 +4,14 @@
     {
         public void DisplayMenu()
         {
+            Console.WriteLine("======ARRAY PRACTICES======");
             Console.WriteLine("1. Enter the elements of an array and display them");
             Console.WriteLine("2. Find the maximum element in an array");
             Console.WriteLine("3. Find the minimum element in an array");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. Summ all element in an array");
+            Console.WriteLine("5. Get average element in an array");
+            Console.WriteLine("6. Reverse element in an array");
+            Console.WriteLine("7. Exit");
         }
         public void Run()
         {
@@ -21,7 +25,8 @@
                 switch (choice)
                 {
                     case 1:
-                        practise.UserInputArray();
+                        practise.ProcessArray();
+                        practise.DisplayArray();
                         break;
                     case 2:
                         practise.FindMax();
@@ -30,6 +35,15 @@
                         practise.FindMin();
                         break;
                     case 4:
+                        practise.SumAll();
+                        break;
+                    case 5:
+                        practise.GetAverage();
+                        break;
+                    case 6:
+                        practise.ReverseArray();
+                        break;
+                    case 7:
                         Console.WriteLine("Exiting the program");
                         break;
                     default:

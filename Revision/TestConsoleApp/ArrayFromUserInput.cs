@@ -77,12 +77,13 @@
     public void ReverseArray()
     {
         int[] arr = ProcessArray();
-        int[] reversedArray;
-        for (int i = 0; i < 0; i--)
+        int[] reversedArray = [];
+        int n = arr.Length;
+        for (int i = 0; i < arr.Length; i++)
         {
-            reversedArray[];
+            reversedArray[i] = arr[n];
+            n--;
         }
-        int average = sum / n;
-        Console.WriteLine($"Average: {average}");
+        Console.WriteLine($"Array after reversed: {reversedArray}");
     }
 }
